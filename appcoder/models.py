@@ -5,6 +5,10 @@ class Curso(models.Model):
     nombre = models.CharField(max_length=30) ##Genera un string, con maximo de longitud
     comision = models.IntegerField()
 
+    def __str__(self):
+        return f"Nombre del cruso: {self.nombre} - Numero de comision: {self.comision}"
+    
+
 class Estudiante(models.Model):
     nombre = models.CharField(max_length=30) ##Genera un string, con maximo de longitud
     apellido = models.CharField(max_length=30) ##Genera un string, con maximo de longitud
